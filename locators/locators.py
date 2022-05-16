@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
 
 class HomepageLocators:
-  PATH = "https://www.webzen.co.kr"
+  PORTAL_PATH = "https://www.webzen.co.kr"
+  MEMBER_PATH = "https://member.webzen.co.kr"
   GNB = (By.XPATH, "//header[@id='header']")
   BI = (By.XPATH, "//div/header/h1/a[@href]")
   CALLER = (By.XPATH, "//a[@class='caller']")
