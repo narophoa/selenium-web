@@ -1,8 +1,8 @@
-import unittest
+import pytest
 from selenium import webdriver
 from locators.locators import HomepageLocators
 
-class TestPortal():
+class Test_page_load():
 
     def test_page_load_portal(self):
         driver = webdriver.Chrome()
