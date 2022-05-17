@@ -1,0 +1,18 @@
+[
+  "tests/portal/test_portal.py::Test_page_load::test_page_load_member",
+  "tests/portal/test_portal.py::Test_page_load::test_page_load_portal",
+  "tests/test_portal.py::Test::test_page_load_member",
+  "tests/test_portal.py::Test::test_page_load_portal",
+  "tests/test_portal.py::TestPortal::test_page_load_member",
+  "tests/test_portal.py::TestPortal::test_page_load_portal",
+  "tests/test_portal.py::TestWebzenPortal::test_page_load_member",
+  "tests/test_portal.py::TestWebzenPortal::test_page_load_portal",
+  "tests/test_portal.py::TestWebzenPortala::test_page_load_member",
+  "tests/test_portal.py::TestWebzenPortala::test_page_load_portal",
+  "tests/test_portal.py::Test_page_load::test_page_load_member",
+  "tests/test_portal.py::Test_page_load::test_page_load_portal",
+  "tests/test_portal.py::TesttPortal::test_page_load_member",
+  "tests/test_portal.py::TesttPortal::test_page_load_portal",
+  "tests/test_portal.py::test_page_load_member",
+  "tests/test_portal.py::test_page_load_portal"
+]
