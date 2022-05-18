@@ -1,4 +1,3 @@
-from ast import Pass
 from selenium import webdriver
 from pages.basepage import BasePage
 from locators.portal.home_locators import HomepageLocators
@@ -9,7 +8,7 @@ class HomePage(BasePage):
         super().__init__(driver)
 
     def open_home_page(self):
-        self.open_url(HomepageLocators.PORTAL_PATH)
+        self.open_url(HomepageLocators.PATH)
 
-    def open_member_page(self):
-        self.open_url(HomepageLocators.MEMBER_PATH)
+    def click_login_button(self):
+        self.click(HomepageLocators.LOGIN)
