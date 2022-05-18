@@ -9,7 +9,6 @@ class BasePage():
 
   def __init__(self, driver):
     self.driver = driver
-    driver = webdriver.Chrome()
 
   # get current page title
   def get_title(self):
