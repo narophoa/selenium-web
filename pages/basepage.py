@@ -20,8 +20,8 @@ class BasePage():
     return self.driver.current_url
 
   # get browser cookies
-  def get_cookies(self):
-    return self.driver.get_cookies()
+  def get_cookie(self, name):
+    return self.driver.get_cookie(name)
 
   # page open url
   def open_url(self, path):

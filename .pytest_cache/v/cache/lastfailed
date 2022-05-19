@@ -1,5 +1,4 @@
 {
-  "tests/portal/test_login.py::Test_logout::test_logout": true,
   "tests/test_portal.py::Test_page_load::test_page_load_member": true,
   "tests/test_portal.py::Test_page_load::test_page_load_portal": true,
   "tests/test_portal.py::test_page_load_member": true,

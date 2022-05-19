@@ -1,5 +1,7 @@
 [
   "tests/portal/test_login.py::Test_login::test_login",
+  "tests/portal/test_login.py::Test_login::test_loginpageOpen",
+  "tests/portal/test_login.py::Test_login::test_logout",
   "tests/portal/test_login.py::Test_logout::test_logout",
   "tests/portal/test_login.py::Test_page_load::test_login",
   "tests/portal/test_portal.py::Test_page_load::test_page_load_member",
