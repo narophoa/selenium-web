@@ -8,7 +8,7 @@ from tests.test_base import BaseTest
 
 class Test_page_load(BaseTest):
 
-    def test_page_load_portal(self):
+    def test_portalpageOpen(self):
         home_page = HomePage(self.driver)
         home_page.open_home_page()
         assert 'Webzen - Games Portal' in home_page.get_title()

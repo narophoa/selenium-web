@@ -32,6 +32,11 @@ class BasePage():
     el = WebDriverWait(self.driver, TIMEOUT).until(EC.element_to_be_clickable(locator))
     el.click()
 
+  # move to element
+  def mouseover(self, locator):
+    # el = WebDriverWait(self.driver, TIMEOUT).until(EC.element_to_be_selected(locator))
+    self.move_to_element(locator)
+
   # find element instance
   def find_element(self, locator):
     return self.driver.find_element(locator[0], locator[1])
