@@ -1,6 +1,9 @@
+import time
 from selenium import webdriver
+from selenium.webdriver.common.alert import Alert
 from locators.muignition2.home_locators import Mui2pageLocators
 from pages.basepage import BasePage
+from pages.portal.loginpage import LoginPage
 from locators.muignition2.cs_locators import Mui2CSLocators
 from locators.portal.login_locators import LoginpageLocators
 
@@ -9,16 +12,13 @@ class CSPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
 
-    def open_login_page(self):
-        self.open_url(LoginpageLocators.PATH)
-
-    def login_success(self): 
-        self.send_keys(LoginpageLocators.ID, "rfrf")
-        self.send_keys(LoginpageLocators.PASSWORD, "webzen@1")
-        self.click(LoginpageLocators.LOGIN_BUTTON)     
-
-    def open_cs_page(self):
-        self.open_url(Mui2CSLocators.PATH)
+    def open_cs_writepage(self):
+        LoginPage.login_success(self)
+        self.open_url(Mui2CSLocators.PATH_WRITE)
+    
+    def open_cs_listpage(self):
+        LoginPage.login_success(self)
+        self.open_url(Mui2CSLocators.PATH_LIST)
 
     def cs_write(self):
         self.send_keys(Mui2CSLocators.PHONE, '92779710')
@@ -26,3 +26,10 @@ class CSPage(BasePage):
         self.send_keys(Mui2CSLocators.CONTENT, '반갑습니다')
         self.click(Mui2CSLocators.AGRPRIVACY)
         self.click(Mui2CSLocators.WRITE)
+        self.alert_accept()
+
+    def cs_delete(self):
+        self.click(Mui2CSLocators.CANCEL)
+        self.alert_accept()
+        time.sleep(3)
+        self.alert_accept()

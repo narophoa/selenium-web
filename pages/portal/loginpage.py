@@ -12,20 +12,19 @@ class LoginPage(BasePage):
         self.open_url(LoginpageLocators.PATH)
 
     def login_success(self): 
-        self.send_keys(LoginpageLocators.ID, "wtwt")
+        self.open_url(LoginpageLocators.PATH)
+        self.send_keys(LoginpageLocators.ID, "rfrf")
         self.send_keys(LoginpageLocators.PASSWORD, "webzen@1")
         self.click(LoginpageLocators.LOGIN_BUTTON)     
-    
-    def login_fail(self): 
-        self.send_keys(LoginpageLocators.ID, "wtwt")
-        self.send_keys(LoginpageLocators.PASSWORD, "1111")
-        self.click(LoginpageLocators.LOGIN_BUTTON)     
-
-    def change_password_check(self):
         if self.find_element(LoginpageLocators.CHANGE_PASSWORD) :
             self.click(LoginpageLocators.CHANGE_PASSWORD)
         else :
             pass
+    
+    def login_fail(self): 
+        self.send_keys(LoginpageLocators.ID, "rfrf")
+        self.send_keys(LoginpageLocators.PASSWORD, "1111")
+        self.click(LoginpageLocators.LOGIN_BUTTON)     
 
     def logout(self): 
         self.click(HomepageLocators.LOGOUT)   

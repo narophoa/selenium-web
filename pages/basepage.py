@@ -1,6 +1,8 @@
 import inspect
 from config.config import TIMEOUT
 from selenium import webdriver
+from selenium.webdriver.common.alert import Alert
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
@@ -45,3 +47,8 @@ class BasePage():
   def send_keys(self, locator, input):
     self.find_element(locator).clear()
     self.find_element(locator).send_keys(input)
+  
+  # Enter
+  def alert_accept(self):
+    result = Alert(self)
+    result.accept()
