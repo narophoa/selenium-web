@@ -22,14 +22,14 @@ class CSPage(BasePage):
 
     def cs_write(self):
         self.send_keys(Mui2CSLocators.PHONE, '92779710')
-        self.send_keys(Mui2CSLocators.TITLE, '안녕하세요')
-        self.send_keys(Mui2CSLocators.CONTENT, '반갑습니다')
+        self.send_keys(Mui2CSLocators.TITLE, '통상점검 문의테스트입니다.')
+        self.send_keys(Mui2CSLocators.CONTENT, '안녕하세요')
         self.click(Mui2CSLocators.AGRPRIVACY)
         self.click(Mui2CSLocators.WRITE)
-        self.alert_accept()
+        # self.enter()
 
     def cs_delete(self):
         self.click(Mui2CSLocators.CANCEL)
-        self.alert_accept()
-        time.sleep(3)
-        self.alert_accept()
+        # self.alert_accept()
+        # time.sleep(3)
+        # self.alert_accept()

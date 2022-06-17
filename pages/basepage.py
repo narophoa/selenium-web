@@ -48,7 +48,11 @@ class BasePage():
     self.find_element(locator).clear()
     self.find_element(locator).send_keys(input)
   
-  # Enter
+  # accpet
   def alert_accept(self):
     result = Alert(self)
     result.accept()
+
+  # Enter
+  def enter(self):
+    self.send_keys(Keys.ENTER)
