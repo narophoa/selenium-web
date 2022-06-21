@@ -1,3 +1,4 @@
+from ast import Pass
 import pytest
 import time
 from selenium import webdriver
@@ -18,9 +19,9 @@ class Test_page_load(BaseTest):
     def test_write_tickets(self):
         tickets_page = CSPage(self.driver)
         tickets_page.open_cs_writepage()
-        tickets_page.cs_write()
+        tickets_page.cs_write()    
 
-    def test_delete_tickets(self):
-        tickets_page = CSPage(self.driver)
-        tickets_page.open_cs_listpage()
-        tickets_page.cs_delete()
+    # def test_delete_tickets(self):
+    #     tickets_page = CSPage(self.driver)
+    #     tickets_page.open_cs_listpage()
+    #     tickets_page.cs_delete()

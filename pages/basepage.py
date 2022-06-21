@@ -1,3 +1,4 @@
+from ast import Pass
 import inspect
 from config.config import TIMEOUT
 from selenium import webdriver
@@ -50,8 +51,11 @@ class BasePage():
   
   # accpet
   def alert_accept(self):
-    result = Alert(self)
-    result.accept()
+    try:
+      result = Alert(self.driver) 
+      result.accept()
+    except:
+      Pass      
 
   # Enter
   def enter(self):

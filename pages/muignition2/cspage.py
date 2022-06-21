@@ -1,6 +1,5 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.common.alert import Alert
 from locators.muignition2.home_locators import Mui2pageLocators
 from pages.basepage import BasePage
 from pages.portal.loginpage import LoginPage
@@ -26,10 +25,12 @@ class CSPage(BasePage):
         self.send_keys(Mui2CSLocators.CONTENT, '안녕하세요')
         self.click(Mui2CSLocators.AGRPRIVACY)
         self.click(Mui2CSLocators.WRITE)
-        # self.enter()
+        time.sleep(5)
+        self.alert_accept()
+        time.sleep(5)
 
-    def cs_delete(self):
-        self.click(Mui2CSLocators.CANCEL)
+    # def cs_delete(self):
+    #     self.click(Mui2CSLocators.CANCEL)
         # self.alert_accept()
         # time.sleep(3)
         # self.alert_accept()
