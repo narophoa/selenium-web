@@ -15,13 +15,16 @@ class Test_page_load(BaseTest):
         home_page = HomePage(self.driver)
         home_page.open_home_page()
         assert '웹게임 No.1 - 뮤 이그니션2' in home_page.get_title()
+
+    # def test_all_page_open(self):
+        
     
     def test_write_tickets(self):
         tickets_page = CSPage(self.driver)
         tickets_page.open_cs_writepage()
         tickets_page.cs_write()    
 
-    # def test_delete_tickets(self):
-    #     tickets_page = CSPage(self.driver)
-    #     tickets_page.open_cs_listpage()
-    #     tickets_page.cs_delete()
+    def test_delete_tickets(self):
+        tickets_page = CSPage(self.driver)
+        tickets_page.open_cs_listpage()
+        tickets_page.cs_delete()

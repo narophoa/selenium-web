@@ -1,5 +1,4 @@
 {
-  "tests/muignition2/test_mui2.py::Test_page_load::test_delete_tickets": true,
   "tests/test_portal.py::Test_page_load::test_page_load_member": true,
   "tests/test_portal.py::Test_page_load::test_page_load_portal": true,
   "tests/test_portal.py::test_page_load_member": true,

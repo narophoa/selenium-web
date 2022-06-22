@@ -1,10 +1,9 @@
 import time
 from selenium import webdriver
-from locators.muignition2.home_locators import Mui2pageLocators
 from pages.basepage import BasePage
 from pages.portal.loginpage import LoginPage
 from locators.muignition2.cs_locators import Mui2CSLocators
-from locators.portal.login_locators import LoginpageLocators
+
 
 class CSPage(BasePage):
     
@@ -12,11 +11,10 @@ class CSPage(BasePage):
         super().__init__(driver)
 
     def open_cs_writepage(self):
-        LoginPage.login_success(self)
-        self.open_url(Mui2CSLocators.PATH_WRITE)
+        LoginPage.login_success(self)   
+        self.open_url(Mui2CSLocators.PATH_WRITE)     
     
     def open_cs_listpage(self):
-        LoginPage.login_success(self)
         self.open_url(Mui2CSLocators.PATH_LIST)
 
     def cs_write(self):
@@ -25,12 +23,11 @@ class CSPage(BasePage):
         self.send_keys(Mui2CSLocators.CONTENT, '안녕하세요')
         self.click(Mui2CSLocators.AGRPRIVACY)
         self.click(Mui2CSLocators.WRITE)
-        time.sleep(5)
         self.alert_accept()
         time.sleep(5)
 
-    # def cs_delete(self):
-    #     self.click(Mui2CSLocators.CANCEL)
-        # self.alert_accept()
-        # time.sleep(3)
-        # self.alert_accept()
+    def cs_delete(self):
+        self.click(Mui2CSLocators.CANCEL)
+        self.alert_accept()        
+        self.alert_accept()
+        time.sleep(5)
