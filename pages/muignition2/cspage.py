@@ -23,11 +23,14 @@ class CSPage(BasePage):
         self.send_keys(Mui2CSLocators.CONTENT, '안녕하세요')
         self.click(Mui2CSLocators.AGRPRIVACY)
         self.click(Mui2CSLocators.WRITE)
+        time.sleep(2)
         self.alert_accept()
-        time.sleep(5)
+        time.sleep(2)
 
     def cs_delete(self):
         self.click(Mui2CSLocators.CANCEL)
-        self.alert_accept()        
+        time.sleep(2)
+        self.alert_accept()    
+        time.sleep(2)    
         self.alert_accept()
-        time.sleep(5)
+        time.sleep(2)
