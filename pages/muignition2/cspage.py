@@ -25,6 +25,7 @@ class CSPage(BasePage):
         self.click(Mui2CSLocators.WRITE)
         time.sleep(2)
         self.alert_accept()
+<<<<<<< HEAD
         time.sleep(2)
 
     def cs_delete(self):
@@ -34,3 +35,10 @@ class CSPage(BasePage):
         time.sleep(2)    
         self.alert_accept()
         time.sleep(2)
+=======
+
+    def cs_delete(self):
+        self.click(Mui2CSLocators.CANCEL)
+        self.alert_accept()        
+        self.alert_accept()
+>>>>>>> 2073278269a91db592bdb9283199b731a2848d78
