@@ -2,6 +2,7 @@ from selenium import webdriver
 from pages.basepage import BasePage
 from locators.portal.login_locators import LoginpageLocators
 from locators.portal.home_locators import HomepageLocators
+from config.config import ID, PW, WRONG_PW
 
 class LoginPage(BasePage):
     
@@ -13,8 +14,8 @@ class LoginPage(BasePage):
 
     def login_success(self): 
         self.open_url(LoginpageLocators.PATH)
-        self.send_keys(LoginpageLocators.ID, "rfrf")
-        self.send_keys(LoginpageLocators.PASSWORD, "webzen@1")
+        self.send_keys(LoginpageLocators.ID, ID)
+        self.send_keys(LoginpageLocators.PASSWORD, PW)
         self.click(LoginpageLocators.LOGIN_BUTTON)     
         if self.find_element(LoginpageLocators.CHANGE_PASSWORD) :
             self.click(LoginpageLocators.CHANGE_PASSWORD)
@@ -22,8 +23,8 @@ class LoginPage(BasePage):
             pass
     
     def login_fail(self): 
-        self.send_keys(LoginpageLocators.ID, "rfrf")
-        self.send_keys(LoginpageLocators.PASSWORD, "1111")
+        self.send_keys(LoginpageLocators.ID, ID)
+        self.send_keys(LoginpageLocators.PASSWORD, WRONG_PW)
         self.click(LoginpageLocators.LOGIN_BUTTON)     
 
     def logout(self): 

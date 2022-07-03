@@ -17,7 +17,7 @@ class CSPage(BasePage):
     def open_cs_listpage(self):
         self.open_url(Mui2CSLocators.PATH_LIST)
 
-    def cs_write(self):
+    def fcs_write(self):
         self.send_keys(Mui2CSLocators.PHONE, '92779710')
         self.send_keys(Mui2CSLocators.TITLE, '통상점검 문의테스트입니다.')
         self.send_keys(Mui2CSLocators.CONTENT, '안녕하세요')
@@ -25,7 +25,6 @@ class CSPage(BasePage):
         self.click(Mui2CSLocators.WRITE)
         time.sleep(2)
         self.alert_accept()
-<<<<<<< HEAD
         time.sleep(2)
 
     def cs_delete(self):
@@ -35,10 +34,3 @@ class CSPage(BasePage):
         time.sleep(2)    
         self.alert_accept()
         time.sleep(2)
-=======
-
-    def cs_delete(self):
-        self.click(Mui2CSLocators.CANCEL)
-        self.alert_accept()        
-        self.alert_accept()
->>>>>>> 2073278269a91db592bdb9283199b731a2848d78
