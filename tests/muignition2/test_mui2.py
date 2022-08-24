@@ -5,14 +5,15 @@ from locators.muignition2.home_locators import Mui2pageLocators
 from pages.muignition2.homepage import HomePage
 from pages.muignition2.cspage import CSPage
 from tests.test_base import BaseTest
+from pages.portal.loginpage import LoginPage
 
 class Test_page_load(BaseTest):
 
     def test_mui2pageOpen(self):
         home_page = HomePage(self.driver)
         home_page.open_home_page()
-        assert '웹게임 No.1 - 뮤 이그니션2' in home_page.get_title()
-        assert home_page.find_element(Mui2pageLocators.PCBANG_BENEFIT_OFF) is not None        
+        assert '웹게임 No.1 - 뮤 이그니션2' in home_page.get_title()            
+        assert home_page.find_element(Mui2pageLocators.PCBANG_BENEFIT_OFF) is not None
 
     def test_all_page_open(self):
         all_page = HomePage(self.driver)
@@ -60,3 +61,12 @@ class Test_page_load(BaseTest):
         tickets_page = CSPage(self.driver)
         tickets_page.open_cs_listpage()
         tickets_page.cs_delete()
+
+    def test_topbar_login_logout(self):
+        home_page = HomePage(self.driver)
+        home_page.open_home_page()
+        home_page.click_login_button()
+        LoginPage.login_success(home_page)
+        assert len(home_page.get_cookie('WZ_AUTH')) > 0
+        LoginPage.logout(home_page)
+        assert home_page.get_cookie('WZ_AUTH') is None

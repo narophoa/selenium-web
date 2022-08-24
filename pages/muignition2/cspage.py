@@ -17,7 +17,7 @@ class CSPage(BasePage):
     def open_cs_listpage(self):
         self.open_url(Mui2CSLocators.PATH_LIST)
 
-    def fcs_write(self):
+    def cs_write(self):
         self.send_keys(Mui2CSLocators.PHONE, '92779710')
         self.send_keys(Mui2CSLocators.TITLE, '통상점검 문의테스트입니다.')
         self.send_keys(Mui2CSLocators.CONTENT, '안녕하세요')

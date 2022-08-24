@@ -66,3 +66,9 @@ class HomePage(BasePage):
   
     def open_storage_page(self):
         self.open_url(Mui2pageLocators.PATH_STORAGE)     
+
+    def click_login_button(self):
+        self.click(Mui2pageLocators.TOPBAR_LOGIN_BUTTON)
+
+    def click_logout_button(self):
+        self.click(Mui2pageLocators.TOPBAR_LOGOUT_BUTTON)

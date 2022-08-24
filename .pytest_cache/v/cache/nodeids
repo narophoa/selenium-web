@@ -3,6 +3,7 @@
   "tests/muignition2/test_mui2.py::Test_page_load::test_delete_tickets",
   "tests/muignition2/test_mui2.py::Test_page_load::test_mui2pageOpen",
   "tests/muignition2/test_mui2.py::Test_page_load::test_tickets",
+  "tests/muignition2/test_mui2.py::Test_page_load::test_topbar_login",
   "tests/muignition2/test_mui2.py::Test_page_load::test_write_tickets",
   "tests/portal/test_login.py::Test_login::test_login",
   "tests/portal/test_login.py::Test_login::test_login_success",
