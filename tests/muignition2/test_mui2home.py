@@ -7,13 +7,14 @@ from pages.muignition2.cspage import CSPage
 from tests.test_base import BaseTest
 from pages.portal.loginpage import LoginPage
 
-class Test_page_load(BaseTest):
+class Test_Homepage(BaseTest):
 
     def test_mui2pageOpen(self):
         home_page = HomePage(self.driver)
         home_page.open_home_page()
-        assert '웹게임 No.1 - 뮤 이그니션2' in home_page.get_title()            
-        assert home_page.find_element(Mui2pageLocators.PCBANG_BENEFIT_OFF) is not None
+        assert '웹게임 No.1 - 뮤 이그니션2' in home_page.get_title()                    
+        is_displayed = home_page.find_element(Mui2pageLocators.PCBANG_BENEFIT_ON).is_displayed()
+        assert is_displayed is True
 
     def test_all_page_open(self):
         all_page = HomePage(self.driver)
@@ -65,8 +66,19 @@ class Test_page_load(BaseTest):
     def test_topbar_login_logout(self):
         home_page = HomePage(self.driver)
         home_page.open_home_page()
-        home_page.click_login_button()
-        LoginPage.login_success(home_page)
+        home_page.click_topbar_login_button()
+        home_page.login_success()
         assert len(home_page.get_cookie('WZ_AUTH')) > 0
-        LoginPage.logout(home_page)
+        home_page.click_topbar_logout_button()
         assert home_page.get_cookie('WZ_AUTH') is None
+
+    def test_site_login_logout(self):
+        home_page = HomePage(self.driver)
+        home_page.open_home_page()
+        home_page.click_site_login_button
+        home_page.login_success()
+        assert len(home_page.get_cookie('WZ_AUTH')) > 0
+        home_page.click_site_logout_button()
+        assert home_page.get_cookie('WZ_AUTH') is None
+
+        

@@ -1,6 +1,8 @@
 from selenium import webdriver
 from pages.basepage import BasePage
 from locators.muignition2.home_locators import Mui2pageLocators
+from locators.portal.login_locators import LoginpageLocators
+from config.config import ID, PW
 
 class HomePage(BasePage):
     
@@ -67,8 +69,23 @@ class HomePage(BasePage):
     def open_storage_page(self):
         self.open_url(Mui2pageLocators.PATH_STORAGE)     
 
-    def click_login_button(self):
+    def click_topbar_login_button(self):
         self.click(Mui2pageLocators.TOPBAR_LOGIN_BUTTON)
 
-    def click_logout_button(self):
+    def click_topbar_logout_button(self):
         self.click(Mui2pageLocators.TOPBAR_LOGOUT_BUTTON)
+
+    def click_site_login_button(self):
+        self.click(Mui2pageLocators.SITE_LOGIN_BUTTON)
+
+    def click_site_logout_button(self):
+        self.click(Mui2pageLocators.SITE_LOGOUT_BUTTON)
+
+    def login_success(self):         
+        self.send_keys(LoginpageLocators.ID, ID)
+        self.send_keys(LoginpageLocators.PASSWORD, PW)
+        self.click(LoginpageLocators.LOGIN_BUTTON)     
+        if self.find_element(LoginpageLocators.CHANGE_PASSWORD) :
+            self.click(LoginpageLocators.CHANGE_PASSWORD)
+        else :
+            pass

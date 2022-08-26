@@ -21,7 +21,9 @@ class Mui2pageLocators:
   PATH_DOWNLOAD = "https://muignition2.webzen.co.kr/support/download"
   PATH_SHOP = "https://muignition2.webzen.co.kr/shop"
   PATH_STORAGE = "https://muignition2.webzen.co.kr/shop/storage/storagelist"  
-  PCBANG_BENEFIT_ON = (By.XPATH, "//*[@class='aside__pcbang__on']")
-  PCBANG_BENEFIT_OFF = (By.XPATH, "//*[@class='aside__pcbang__off']")
+  PCBANG_BENEFIT_ON = (By.XPATH, "//*[@id='pabangLayerON']") 
+  PCBANG_BENEFIT_OFF = (By.XPATH, "//*[@id='pabangLayerOff']")
   TOPBAR_LOGIN_BUTTON = (By.XPATH, "//*[@class='before-login']/a[2]")
   TOPBAR_LOGOUT_BUTTON = (By.XPATH, "//*[@class='after-login']/a[3]")
+  SITE_LOGIN_BUTTON = (By.XPATH, "//*[@class='btn-login']")
+  SITE_LOGOUT_BUTTON = (By.XPATH, "//*[@class='login-menu']/a[2]")
