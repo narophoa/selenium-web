@@ -2,6 +2,11 @@ from selenium.webdriver.common.by import By
 
 class HomepageLocators:
   PATH = "https://www.webzen.co.kr"
+  PATH_SIGNUP = "https://member.webzen.co.kr/signup"
+  PATH_RESIGNUP = "https://member.webzen.co.kr/resignup/agreement"
+  PATH_FORGOT = "https://member.webzen.co.kr/forgot"
+  PATH_FORGOT_PASSWORD = "https://member.webzen.co.kr/forgot/password"  
+  
   GNB = (By.XPATH, "//header[@id='header']")
   BI = (By.XPATH, "//div/header/h1/a[@href]")
   CALLER = (By.XPATH, "//a[@class='caller']")

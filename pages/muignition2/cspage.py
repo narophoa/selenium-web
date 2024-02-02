@@ -11,7 +11,7 @@ class CSPage(BasePage):
         super().__init__(driver)
 
     def open_cs_writepage(self):
-        LoginPage.login_success(self)   
+        LoginPage.login_success(self)           
         self.open_url(Mui2CSLocators.PATH_WRITE)     
     
     def open_cs_listpage(self):

@@ -1,0 +1,33 @@
+from selenium.webdriver.common.by import By
+
+class ShotpageLocators:
+  PATH = "https://www.shotonline.co.kr/"
+  PATH_HOMEBUTTON = (By.XPATH, "/html/body/div[2]/div[1]/aside/a")  
+  PATH_NOTICES = "https://www.shotonline.co.kr/news/notice"
+  PATH_PATCHNOTE = "https://www.shotonline.co.kr/news/patchnote"
+  PATH_UPDATES = "https://www.shotonline.co.kr/news/update"
+  PATH_EVENT = "https://www.shotonline.co.kr/news/event"
+  PATH_BODO = "https://www.shotonline.co.kr/news/bodo"
+  PATH_GAME_INFO = "https://www.shotonline.co.kr/gameinfo"
+  PATH_GAME_GUIDE = "https://www.shotonline.co.kr/gameinfo/guide"
+  PATH_COURSE_RANKING = "https://www.shotonline.co.kr/ranking/coursemonthly"
+  PATH_WORLD_RANKING = "https://www.shotonline.co.kr/ranking/worldtour"
+  PATH_PERSONAL_RAKING = "https://www.shotonline.co.kr/ranking/personal"
+  PATH_CHANNEL_RANKING = "https://www.shotonline.co.kr/ranking/channel"
+  PATH_GUILD_RANKING = "https://www.shotonline.co.kr/guild/ranking"
+  PATH_GUILD_SKETCH = "https://www.shotonline.co.kr/guild/sketch"
+  PATH_STORY = "https://www.shotonline.co.kr/community/story"
+  PATH_DISCUSSION = "https://www.shotonline.co.kr/community/discussion"
+  PATH_STUDY = "https://www.shotonline.co.kr/community/study"
+  PATH_SCREENSHOT = "https://www.shotonline.co.kr/community/screenshot"
+  PATH_SURVEY = "https://www.shotonline.co.kr/community/survey"
+  PATH_SHOP = "https://www.shotonline.co.kr/itemmall?displaycode=1"
+  PATH_PROB = "https://www.shotonline.co.kr/news/item"
+  PATH_FAQ = "https://www.shotonline.co.kr/support/faq"
+  PATH_CS = "https://www.shotonline.co.kr/support/qna"
+  PATH_DOWNLOAD = "https://www.shotonline.co.kr/support/download"
+  PATH_POLICY = "https://www.shotonline.co.kr/etc/policy"
+  #로그인 필요 페이지
+  PATH_CASHCHARGE = "https://www.shotonline.co.kr/cashcharge"
+  PATH_COUPON = "https://www.shotonline.co.kr/coupon"
+  PATH_LOGIN = "https://www.shotonline.co.kr/login"

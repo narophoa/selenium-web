@@ -2,5 +2,16 @@
   "tests/test_portal.py::Test_page_load::test_page_load_member": true,
   "tests/test_portal.py::Test_page_load::test_page_load_portal": true,
   "tests/test_portal.py::test_page_load_member": true,
-  "tests/test_portal.py::test_page_load_portal": true
+  "tests/test_portal.py::test_page_load_portal": true,
+  "tests/muignition2/test_mui2home.py::Test_Homepage::test_site_login_logout": true,
+  "tests/muignition2/test_mui2home.py::Test_Homepage::test_write_tickets": true,
+  "tests/muignition2/test_mui2home.py::Test_Homepage::test_delete_tickets": true,
+  "tests/muignition2/test_mui2home.py::Test_Login::test_site_login_logout": true,
+  "tests/muignition2/test_mui2home.py::Test_Login::test_topbar_login_logout": true,
+  "tests/muignition2/test_mui2home.py::Test_MUI2Shop::test_dia_purcharge_click": true,
+  "tests/r2/test_r2home.py::Test_Homepage::test_mui2shoppageOpen": true,
+  "tests/r2/test_r2home.py::Test_Homepage::test_mui2shop_purchage": true,
+  "tests/r2/test_r2home.py::Test_Homepage::test_mui2shop_refund": true,
+  "tests/sunclassic/test_sunclhome.py::Test_Homepage::test_mui2pageOpen": true,
+  "tests/r2/test_r2home.py::Test_R2Shop::test_r2shop_refund": true
 }
